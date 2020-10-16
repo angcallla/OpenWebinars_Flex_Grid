@@ -1,0 +1,138 @@
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    background-color: aqua;
+
+    height: 200px;
+    margin: 20px auto;
+    padding: 10px;
+    width: 60%;
+}
+
+.container-flex{
+    background-color: aqua;
+    display: flex;
+    height: 200px;
+    margin: 20px auto;
+    padding: 10px;
+    width: 60%;
+}
+
+.container div, .container-flex div{
+    background-color: red;
+    border: 1px solid black;
+}
+
+.container div, .container-flex div:not([class = "stretch"]){
+    height: 50px;
+}
+
+#row-reverse.container-flex{
+    flex-direction: row-reverse;
+}
+
+#column.container-flex{
+    flex-direction: column;
+}
+
+#column-reverse.container-flex{
+    flex-direction: column-reverse;
+}
+
+#wrap.container-flex{
+    width: 20%;
+    flex-flow: column-reverse wrap;
+}
+
+#wrap-reverse.container-flex{
+    width: 20%;
+    flex-wrap: wrap-reverse;
+}
+
+#flex-start.container-flex{
+    width: 60%;
+    justify-content: flex-start;
+}
+
+#center.container-flex{
+    width: 60%;
+    justify-content: center;
+}
+
+#space-between.container-flex{
+    width: 60%;
+    justify-content: space-between;
+}
+
+#space-around.container-flex{
+    width: 60%;
+    justify-content: space-around;
+}
+
+#space-evenly.container-flex{
+    width: 60%;
+    justify-content: space-evenly;
+}
+
+#v-flex-start.container-flex{
+    width: 60%;
+    align-items: flex-start;
+}
+
+#v-flex-end.container-flex{
+    width: 60%;
+    align-items: flex-end;
+}
+
+#v-center.container-flex{
+    width: 60%;
+    align-items: center;
+}
+
+#v-stretch.container-flex{
+    width: 60%;
+    align-items: stretch;
+}
+
+#v-baseline.container-flex{
+    width: 60%;
+    align-items: baseline;
+}
+
+#v-v-flex-start.container-flex{
+    width: 20%;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+#v-v-flex-end.container-flex{
+    width: 20%;
+    flex-wrap: wrap;
+    align-content: flex-end;
+}
+
+#v-v-center.container-flex{
+    width: 20%;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+#v-v-space-between.container-flex{
+    width: 20%;
+    align-content: space-between;
+    flex-wrap: wrap;
+}
+
+#v-v-space-around.container-flex{
+    width: 20%;
+    align-content: space-around;
+    flex-wrap: wrap;
+}
+
+#v-v-space-evenly.container-flex{
+    width: 20%;
+    align-content: space-evenly;
+    flex-wrap: wrap;
+}

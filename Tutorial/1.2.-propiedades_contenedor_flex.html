@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.2</title>
+</head>
+<body>
+
+    <h1>1.2.-Maquetando con contenedores Flex: Propiedades en el contenedor Flex</h1>
+
+    <p>El primer paso de lo que sería la maquetación Flex es añadir al contenedor la propiedad "display:flex"</p>
+
+    <p>Los siguientes apuntes están desarrollados en el ejemplo que encontrarás en la carpeta "Ejemplos"</p>
+
+    <h2>Dirección de los elementos flexibles</h2>
+
+    <p>
+        podemos fijar la dirección en donde va a haber flexibilidad dandole valor a la propiedad <b>flex-direction</b>
+        del contenedor
+    </p>
+
+    <ul>
+        <li>row (default): por defecto es la dirección de fila</li>
+        <li>row-reverse: fila inversa</li>
+        <li>column: dirección de columna</li>
+        <li>column-reverse: dirección de columna inversa</li>
+    </ul>
+
+    <h2>Ajuste de los elementos flexibles (si no caben)</h2>
+
+    <h3>Utilizo la propiedad flex-wrap que tiene 3 valores:</h3>
+
+    <ul>
+        <li>nowrap (default): fuerza a que estén los elementos en una línea</li>
+        <li>wrap: los elementos se disponene en varias líneas. De arriba a abajo</li>
+        <li>wrap-reverse: lo mismo que el anterior pero de abajo arriba</li>
+    </ul>
+
+    <h2>Flex-flow</h2>
+
+    <p>Esta propiedad me permite combinar la configuración flex-direction y flex-wrap en una sola línea</p>
+
+    <p>Su estructura es la siguiente</p>
+
+    <p><b>flex-flow: [flex-direction] [flex-wrap]</b></p>
+
+    <h2>Alineación horizontal de los elementos flexibles</h2>
+
+    <p>Para alinear los elementos flexibles horizontalmente, utilizo la propiedad <b>justify-content</b> a 
+    la que le puedo dar los siguiente valores:</p>
+
+    <ul>
+        <li>flex-start: al principio</li>
+        <li>flex-end: los pongo al final</li>
+        <li>center: los pongo en el centro</li>
+        <li>space-between: añade espacio proporcionar entre los elementos del contenedor</li>
+        <li>space-around: igual que space-between pero respetando el espacio de las aristas izquierda y derecha</li>
+        <li>space-evenly: igual que space-around pero los espacios son todos del mismo tamaño</li>
+    </ul>
+
+    <h2>Alineación vertical de los elementos flexibles</h2>
+
+    <p>Para alinear los elementos flexibles verticalmente, utilizo la propiedad <b>align-items</b> a 
+        la que le puedo dar los siguiente valores:</p>
+
+    <ul>
+        <li>flex-start: me los alinea arriba</li>
+        <li>flex-end: me los alinea abajo</li>
+        <li>center: centra los elementos</li>
+        <li>stretch: verticalmente, los elementos ocuparán todo el contenedor. Esto no funciona si tenemos agregada una altura a los elementos flexibles.</li>
+        <li>baseline: alinea los textos de los elementos</li>
+    </ul>
+
+    <h2>Alineación vertical si tengo varias líneas:</h2>
+
+    <p>Si tengo varias líneas en el contenedor usando wrap, puedo también alinearlas con la propiedad <b>align-content</b> que puede tener los siguientes valores:</p>
+
+    <ul>
+        <li>flex-start: al principio</li>
+        <li>flex-end: los pongo al final</li>
+        <li>center: los pongo en el centro</li>
+        <li>space-between: añade espacio proporcionar entre los elementos del contenedor</li>
+        <li>space-around: igual que space-between pero respetando el espacio de las aristas izquierda y derecha</li>
+        <li>space-evenly: igual que space-around pero los espacios son todos del mismo tamaño</li>
+    </ul>
+
+    
+
+
+    
+</body>
+</html>
