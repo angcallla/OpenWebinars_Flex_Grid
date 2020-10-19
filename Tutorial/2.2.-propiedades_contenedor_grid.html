@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Propiedades en el contenedor Grid</h1>
+
+    <h2>Lo primero que tenemos que hacer es definir su estructura</h2>
+
+    <h3>Para definir su estructura utilizaré las siguiente propiedades (tras haber usado la propiedad <b>display:grid</b>)</h3>
+
+    <ul>
+        <li><b>grid-template-columns</b>: Número de columnas del grid y tamaño de las mismas</li>
+        <li><b>grid-template-rows</b>: Número de filas del grid y tamaño de las mismas</li>
+        <li><b>grid-row-gap</b>: Separación entre las filas</li>
+        <li><b>grid-column-gap</b>: Separación entre las columnas</li>
+    </ul>
+
+    <h4>En estas propiedades puedo tener varias formas de expresarlas, vamos a verlas:</h4>
+
+    <h5>COLUMNAS</h5>
+
+    <ul>
+        <li><b>grid-template-columns</b>: Debemos de poner tantos valores de anchura como columnas quiero que tenga el GRID</li>
+    </ul>
+
+    <ul style="list-style-type: none;">
+        <li>grid-template-columns: 20% 50% 30% (Estoy diciendo que tengo 3 columnas y cada % es el tamaño de la 1 a la 3)</li>
+        <li>grid-template-columns: 100px auto 100px 100px</li>
+        <li>grid-template-columns: auto auto auto auto auto</li>
+        <li>grid-template-columns: [id] 100px [nombre] 300px [apellidos] auto (Estamos hablando aquí de que tenemos 3 columnas a las que les hemos dado nombre y tamaño)</li>
+    </ul>
+
+    <h5>FILAS</h5>
+
+    <ul>
+        <li><b>grid-template-rows</b>: Debemos de poner tantos valores de altura como filas quiero que tenga el GRID</li>
+    </ul>
+
+    <ul style="list-style-type: none;">
+        <li>grid-template-rows: 20% 50% 30% (Estoy diciendo que tengo 3 filas y cada % es el tamaño de la 1 a la 3)</li>
+        <li>grid-template-rows: 100px auto 100px 100px</li>
+        <li>grid-template-rows: auto auto auto auto auto</li>
+        <li>grid-template-rows: [uno] 100px [dos] 300px [tres] auto (Estamos hablando aquí de que tenemos 3 filas a las que les hemos dado nombre y tamaño)</li>
+    </ul>
+
+    <h5>REPETIR VALORES Y UNIDAD FR</h5>
+
+    <p>grid-template-column: repeat(3, 20% [col-start]) auto -> Indicamos 3 columnas con 20% de ancho y nombre "col-start" y luego una cuarta columna con ancho auto</p>
+    <p>grid-template-column: 2fr 100px 1fr 2fr (con la unidad <b>fr</b>, añadimos peso a la repartición del espacio sobrante)</p>
+
+    <h2>Alineación horizontal DEL CONTENIDO</h2>
+
+    <p>Utilizo la propiedad <b>justify-items</b> que posee los siguientes valores:</p>
+
+    <ul>
+        <li>start</li>
+        <li>end</li>
+        <li>center</li>
+        <li>stretch (por defecto, el contenido ocupa toda la celda de mi grid)</li>
+    </ul>
+
+    <h2>Alineación vertical DEL CONTENIDO</h2>
+
+    <p>Utilizo la propiedad <b>align-items</b> que posee los siguientes valores:</p>
+
+    <ul>
+        <li>start</li>
+        <li>end</li>
+        <li>center</li>
+        <li>stretch (por defecto, el contenido ocupa toda la celda de mi grid)</li>
+    </ul>
+
+    <h3>Puedo juntar las dos alineaciones en una sola línea con <b>place-item</b> </h3>
+
+    place-item: start (vertical) end (horizontal)
+
+    <h2>Distribución horizontal dentro del contenedor cuando el grid no ocupa todo su contenedor</h2>
+
+    <p>Esto lo hacemos con la propiedad <b>justify-content</b> </p>
+
+    <img src="../Img/grid_justify_content.png" alt="">
+
+    <h2>Distribución vertical dentro del contenedor cuando el grid no ocupa todo su contenedor</h2>
+
+    <p>Esto lo hacemos con la propiedad <b>align-content</b> </p>
+
+    <img src="../Img/grid_align_content.png" alt="">
+
+    <h3>Puedo juntar las dos distribuciones en una sola línea con <b>place-content</b> </h3>
+
+    place-content: start (vertical) end (horizontal)
+
+</body>
+</html>
