@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Elementos del Grid: posición y tamaño</h1>
+
+    <h2>Que propiedades puedo modificar:</h2>
+
+    <ul>
+        <li><b>Área del GRID</b> que va a ocupar</li>
+        <li><b>Alineación horizontal</b> de manera individual (en el área que ocupa)</li>
+        <li><b>Alineación vertical</b> de manera individual (en el área que ocupa)</li>
+        <li><b>Colocación implícita</b> si no especificamos nada</li>
+    </ul>
+
+    <p>
+        <b>LOS ELEMENTOS QUE ESTÁN DENTRO DE UN DISPLAY:GRID, NO LES AFECTA:</b> float, display:inline-block,
+        display-table-cell, vertical-align o column-*
+    </p>
+
+    <h3>AREA A OCUPAR</h3>
+
+    <p>Para especificar el área utilizo las siguiente propiedades:</p>
+
+    <ul>
+        <li><b>grid-colum-start</b>: Inicio del área a nivel de columna (nombre o número)</li>
+        <li><b>grid-column-end</b>: Fin del área a nivel de columna (nombre o número)</li>
+        <li><b>grid-row-start</b>: Inicio del área a nivel de fila (nombre o número)</li>
+        <li><b>grid-row-end</b>: Fin del área a nivel de fila (nombre o número)</li>
+    </ul>
+
+    <p><b>También se puede usar en vez del nombre o número para determinar el fin de la columna o fila, span X,
+        donde X es el número de columnas o filas que va a ocupar desde el inicio</b></p>
+
+    <p>En este ejemplo se ve más claro:</p>
+
+    <img src="../Img/area_elementos_grid.PNG" alt="" height="400px">
+
+    <h4>Podemos juntar estas propiedades:</h4>
+
+    <ul>
+        <li><b>grid-column:</b> [start] / [end]</li>
+        <li><b>grid-row:</b> [start] / [end]</li>
+        <li><b>grid:</b> [row-start] [column-start] [row-end] [column-end]</li>
+    </ul>
+
+    <h3>ALINEACIÓN HORIZONTAL</h3>
+
+    <p>Alineamos horizontalmente el contenido delimitado por un área del grid con la propiedad <b>justify-self</b>
+    que puede tener los valores:</p>
+
+    <ul>
+        <li>start</li>
+        <li>end</li>
+        <li>center</li>
+        <li>stretch (por defecto)</li>
+    </ul>
+
+    <p>Los valores son los mismos que usábamos en la propiedad <b>justify-items</b> del <b>contenedor grid</b></p>
+
+    <h3>ALINEACIÓN VERTICAL</h3>
+
+    <p>Alineamos verticalmente el contenido delimitado por un área del grid con la propiedad <b>align-self</b>
+        que puede tener los valores:</p>
+    
+        <ul>
+            <li>start</li>
+            <li>end</li>
+            <li>center</li>
+            <li>stretch (por defecto)</li>
+        </ul>
+    
+    <p>Los valores son los mismos que usábamos en la propiedad <b>align-items</b> del <b>contenedor grid</b></p>
+
+    <h3>COLOCACIÓN IMPLÍCITA</h3>
+
+    <p>
+        La <b>colocación implícita</b> de los elementos grid es lo que sucede cuando a un elemento grid lo coloco
+        <b>fuera</b> de la <b>estructura inicial</b> (por ejemplo: en un grid 3x4 decir que un elemento va en un 5x6) o 
+        cuando simplemento <b>no le digo</b> a un elemento que <b>posición</b> va a ocupar.
+    </p>
+
+    <p>Las propiedades que utilizamos son:</p>
+
+    <ul>
+        <li><b>grid-auto-column</b>: Defino, a partir de que me salgo de la estructura inicial del grid, cuanto va a ser el tamaño las siguiente columnas</li>
+        <li><b>grid-auto-rows</b>: Defino, a partir de que me salgo de la estructura inicial del grid, cuanto va a ser el tamaño las siguiente filas</li>
+        <li><b>grid-auto-flow</b>: Como hacer el flujo a través de ese overflow (los vemos a continuación)</li>
+    </ul>
+
+    <h4>
+        Para elementos a los que no he dado una colocación, establezco donde van a situarse en el grid mediante
+        la propiedad <b>grid-auto-flow</b>
+    </h4>
+
+    <p>Los valores de esta propiedad son:</p>
+
+    <ul>
+        <li><b>row</b>: rellena las filas primero (opción por defecto)</li>
+        <li><b>column</b>: rellena las columnas primero</li>
+        <li>
+            <b>dense</b>: Intenta rellenar primero los huecos si viene elementos más pequeños. 
+            <b>Puede cambiar el orden de los elementos así que hay que tener cuidado.</b>
+        </li>
+    </ul>
+
+</body>
+</html>
